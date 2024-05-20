@@ -1,0 +1,108 @@
+---
+title: "Getting started with Python"
+subtitle: "Configuring a new VM with my python workspace"
+format: html
+---
+
+I intend to document how I set up VSCode for use with both Python and Polars (plus Pandas).  At the same time, I have notes about how to set up RStudio to code in both R and Python.  I started this document to clarify how I would use the Polars package with Python.  Polars vastly improves how Python (pandas) can be used for data wrangling.  However, to be honest, Polars seems to bring Pandas (Python) up to speed with R for data wrangling.  Inotherwords, there's no real need to use Python and Polars, if you already know R.  (And, if you already know R, choose Tidyverse ({dbplyr}, {DBI}) and {DuckDB} as the best and fastest, because this config will exceed Python (Pandas) and Polars, or Tidyverese and Polars.)  
+
+In summary, if you're Pythonic:  choose VSCode with Polars and Pandas.  If you're a Tidyverse denizen, choose RStudio, {reticulate}, and {duckdb}.  
+
+## Dowload in advance
+
+- Python
+- VSCode
+- Quarto
+- Firefox
+- R
+- RStudio
+
+## Install Python
+
+1. Download python from python.org and install it.
+    - check "add python.exe to path"  [NO]
+2. Windows > Cmd > where python > (note/save path so you have it)
+    - C:\Users\local_me_user-id\AppData\Local\Programs\Python\Python312\python.exe
+
+## Install Packages
+
+3. pip list gives the command to upgrade pip
+    - python.exe -m pip install --upgrade pip' command
+    - pip install
+        - (If you have multiple python instances you may have to be more careful with the following commands)
+            - See Also:  https://stackoverflow.com/questions/23708898/pip-is-not-recognized-as-an-internal-or-external-command
+            - my pip is installed here:  C:\Users\jrl\AppData\Local\Programs\Python\Python312\Scripts
+        - pip install pandas
+        - pip install polars
+        - pip install polars-lts-cpu
+        - pip install altair
+        - pip install seaborn
+        - pip install matplotlib
+        - pip install vega_datasets
+        - pip install jupyter            
+        - pip install pyyaml 
+        - pip install nbformat
+        - pip install nbclient
+        - pip list        
+
+## Install VSCode
+
+google "download vscode" and do it.
+
+## configure VSCode to python and Quarto
+
+- Support for languages  (Python, Jupyter, github copilot)
+
+## GitHub Copilot
+
+- Add github copilot extensions
+- Sign-in to github copilot
+
+## Install Quarto
+
+- install from source
+- OpenVSCode > Extensions > Add Quarto extension
+- VSCode > Welcome > Verify Installation
+- VSCode > Welcome > Create a document
+- VSCode > Welcome > Render/Preview document
+- VSCode > in edited *.qmd > ctrl-shift-k
+
+1. VSCode > New File > Quarto Project > Website Project 
+2. VSCode > File > Save Workspace
+3. Test basic python code
+
+## VSCode Extensions
+
+- GitHub Copilot
+- jupyter
+- jupyter Notebook
+- pylance
+- python
+- pyhon debugger
+- quarto
+- R (search for "R language")
+
+## In VSCode
+
+in the R Extension for Visual Studio settings
+1. For `R > Rpath:Windows` enter the R interpreter (you can get this from RStudio global settings, or ask Google for help)
+2. Optional:  In R console:  install.packages("httpgd")
+3. Optional:  Back in VSCode R Extensions for VSCode, check the httpgd option
+Per the optional, httpgd, I'm not sure this is so great, but some people dig it.
+
+
+## In RStudio
+1. From Windows Command line:  `where Python`
+2. RStudio > Tools > Global Options > Python
+3. Enter "Python interpreter"  path found in line 1.
+4. RStudio > `install.packages("reticulate")`
+
+
+## Python Environment within VSCode [?]
+
+consider creating a python environment
+
+- Welcome Screen > Select or create a python environment 
+    - In the VSCode command pallet:  `python: create environment command`    
+
+

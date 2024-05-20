@@ -1,0 +1,5 @@
+## README
+
+Notes on configuring VSCode with Python on my Windows 10.  Includes notes on configuring Python with pandas and polars, plus R, inside VSCode.  Also includes notes on configuring python inside RStudio.  
+
+I intend to document how I set up VSCode for use with both Python and Polars (plus Pandas).  At the same time, I have notes about how to set up RStudio to code in both R and Python.  I started this document to clarify how I would use the Polars package with Python.  Polars vastly improves how Python (pandas) can be used for data wrangling.  However, to be honest, Polars seems to bring Pandas (Python) up to speed with R for data wrangling.  Inotherwords, there's no real need to use Python and Polars, if you already know R.  (And, if you already know R, choose Tidyverse ({dbplyr}, {DBI}) and {DuckDB} as the best and fastest, because this config will exceed Python (Pandas) and Polars, or Tidyverese and Polars.) 
